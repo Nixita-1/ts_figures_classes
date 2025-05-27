@@ -13,27 +13,27 @@ export class Triangle implements Figure {
     public b: number,
     public c: number,
   ) {
-    if (a <= 0 || b <= 0 || c <= 0) {
+    if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
       throw new Error(
-        `Invalid side length(s): a=${a}, b=${b}, c=${c}. All sides must be greater than zero.`,
+        `Invalid side length(s): a=${this.a}, b=${this.b}, c=${this.c}. All sides must be greater than zero.`,
       );
     }
 
-    if (a + b <= c) {
+    if (this.a + this.b <= this.c) {
       throw new Error(
-        `Invalid triangle: ${a} + ${b} <= ${c}. The sum of two sides must be greater than the third.`,
+        `Invalid triangle: ${this.a} + ${this.b} <= ${this.c}. The sum of two sides must be greater than the third.`,
       );
     }
 
-    if (a + c <= b) {
+    if (this.a + this.c <= this.b) {
       throw new Error(
-        `Invalid triangle: ${a} + ${c} <= ${b}. The sum of two sides must be greater than the third.`,
+        `Invalid triangle: ${this.a} + ${this.c} <= ${this.b}. The sum of two sides must be greater than the third.`,
       );
     }
 
-    if (b + c <= a) {
+    if (this.b + this.c <= this.a) {
       throw new Error(
-        `Invalid triangle: ${b} + ${c} <= ${a}. The sum of two sides must be greater than the third.`,
+        `Invalid triangle: ${this.b} + ${this.c} <= ${this.a}. The sum of two sides must be greater than the third.`,
       );
     }
   }
