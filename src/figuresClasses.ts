@@ -53,7 +53,7 @@ export class Circle implements Figure {
     public color: 'red' | 'green' | 'blue',
     public radius: number,
   ) {
-    if (radius <= 0) {
+    if (this.radius <= 0) {
       throw new Error(
         `Invalid radius: ${radius}. Radius must be greater than zero.`,
       );
@@ -75,13 +75,13 @@ export class Rectangle implements Figure {
     public width: number,
     public height: number,
   ) {
-    if (width <= 0) {
+    if (this.width <= 0) {
       throw new Error(
         `Invalid width: ${width}. Width must be greater than zero.`,
       );
     }
 
-    if (height <= 0) {
+    if (this.height <= 0) {
       throw new Error(
         `Invalid height: ${height}. Height must be greater than zero.`,
       );
